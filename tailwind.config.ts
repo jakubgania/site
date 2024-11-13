@@ -15,4 +15,9 @@ export default {
     },
   },
   plugins: [],
+  variants: {
+    extend: {
+      visibility: ["group-hover"],
+    },
+  },
 } satisfies Config;
