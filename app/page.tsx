@@ -1,9 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   const projects = [
-    { name: "example project", path: "/example-path" },
-    { name: "example project", path: "/example-path-2" },
+    { name: "github-trending-repositories", path: "/example-path-3" },
+    { name: "fastapi-graphql", path: "/example-path-2" },
+    { name: "api-rest-to-graphql-github", path: "/example-path" }
   ]
 
   const youtube = [
@@ -70,6 +72,13 @@ export default function Home() {
     "SwiftUI"
   ]
 
+  const software = [
+    "Visual Studio Code",
+    "Xcode",
+    "Final Cut Pro",
+    "Pixelmator Pro"
+  ]
+
   const links = [
     { title: "X", url: "https://x.com/jakubgania" },
     { title: "GitHub", url: "https://github.com/jakubgania" },
@@ -95,7 +104,7 @@ export default function Home() {
           <div className="text-4xl font-bold tracking-tight">
             Jakub Gania
           </div>
-          <div className="text-xl text-slate-500">
+          <div className="text-xl text-slate-400">
             Software Enginner & Creator
           </div>
         </div>
@@ -104,36 +113,57 @@ export default function Home() {
         {/* <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who likes to experiment with technologies. I add various interesting content on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a>. */}
         <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500">linkedin</a>
       </div>
+      <LinkButton path="/" title="about" />
       <div>
         <h2 className="text-3xl font-bold">
           technologies
         </h2>
         <div className="py-8">
-          <div className="font-mono text-xl">
+          <div className="text-xl">
             I experiment with different technologies
           </div>
         </div>
         <div className="flex flex-row flex-wrap gap-4 relative">
           {tags.map((tag) => (
-            <div key={tag} className="bg-slate-100 font-mono rounded-2xl py-2 px-4 group relative">
-              <span className="text-xl text-slate-500 cursor-default">{tag}</span>
+            <div key={tag} className="bg-slate-100 rounded-2xl py-2 px-4 group relative">
+              {/* <span className="text-xl text-slate-500 cursor-default">{tag}</span> */}
+              <span className="text-xl cursor-default">{tag}</span>
             </div>
           ))}
         </div>
       </div>
       <div>
         <h2 className="text-3xl font-bold">
+          software
+        </h2>
+        <div className="py-8">
+          <div className="text-xl">
+            apps and programs I use
+          </div>
+        </div>
+        <div className="flex flex-row flex-wrap gap-4 relative">
+          {software.map((app) => (
+            <div key={app} className="bg-slate-100 rounded-2xl py-2 px-4 group relative">
+              {/* <span className="text-xl text-slate-500 cursor-default">{tag}</span> */}
+              <span className="text-xl cursor-default">{app}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <LinkButton path="/" title="all programs" />
+      <div>
+        <h2 className="text-3xl font-bold">
           links
         </h2>
         <div className="py-8">
-          <div className="font-mono text-xl">
+          <div className="text-xl">
             my social media and other websites
           </div>
         </div>
         <ul className="w-full flex flex-col gap-4">
           {links.map((link) => (
             <li key={link.title} className="">
-              <a href={link.url} target="_blank" className="flex text-xl text-slate-500 bg-slate-100 rounded-2xl p-3 w-full">
+              <a href={link.url} target="_blank" className="flex text-xl bg-slate-100 rounded-2xl p-3 w-full">
                 {link.title}
               </a>
             </li>
@@ -145,16 +175,17 @@ export default function Home() {
           projects
         </h2>
         <div className="py-8">
-          <div className="font-mono text-xl">
+          <div className="text-xl">
             some of my projects
           </div>
         </div>
-        <ul className="list-disc pl-6">
+        <ul className="list-disc marker:text-black pl-6">
         {projects.map((project) => (
           <li key={project.path} className="text-2xl text-blue-500 pb-2">{project.name}</li>
         ))}
         </ul>
       </div>
+      <LinkButton path="/" title="all projects" />
       <div>
         <h2 className="text-3xl font-bold">
           youtube
@@ -166,10 +197,28 @@ export default function Home() {
         </div>
         <ul className="list-disc marker:text-black pl-6">
           {youtube.map((video) => (
-            <li key={video.url} className="text-2xl text-blue-500 tracking-tight pb-6">
+            <li key={video.url} className="text-2xl text-blue-500 tracking-tight pb-6 relative group">
+              {/* <div className="hidden group-hover:block">
+                <Image
+                  src="/hqdefault.jpg"
+                  width={240}
+                  height={140}
+                  alt="ptho"
+                  className="rounded-2xl"
+                />
+              </div> */}
               <a href={video.url} target="_blank">
                 {video.name}
               </a>
+              {/* <div className="hidden absolute z-20 group-hover:block bg-white">
+                <Image
+                  src="/hqdefault.jpg"
+                  width={240}
+                  height={140}
+                  alt="ptho"
+                  className="rounded-2xl"
+                />
+              </div> */}
               {/* <div className="pt-2">
                 <div className="text-black text-xl font-semibold">
                   read more
@@ -181,4 +230,20 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+interface LinkButtonProps {
+  path: string,
+  title: string
+}
+
+function LinkButton({ path, title } : LinkButtonProps) {
+
+  return (
+    <div className="flex justify-end">
+      <Link href={path} className="bg-black text-white text-xl tracking-tight rounded-full py-2 px-4">
+        {title}
+      </Link>
+    </div>
+  )
 }
