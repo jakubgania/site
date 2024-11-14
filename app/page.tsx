@@ -5,7 +5,10 @@ export default function Home() {
   const projects = [
     { name: "github-trending-repositories", path: "/example-path-3" },
     { name: "fastapi-graphql", path: "/example-path-2" },
-    { name: "api-rest-to-graphql-github", path: "/example-path" }
+    { name: "api-rest-to-graphql-github", path: "/example-path" },
+    { name: "leetcode-solutions", path: "/ltc" },
+    { name: "nextjs-templates", path: "/nxjstml" },
+    { name: "one-page-templates", path: "/opt" }
   ]
 
   const youtube = [
@@ -60,8 +63,8 @@ export default function Home() {
     "CSS",
     "JavaScript",
     "TypeScript",
-    "Next.js",
     "TailwindCSS",
+    "Next.js",
     "Python",
     "Flask",
     "FastAPI",
@@ -104,13 +107,12 @@ export default function Home() {
           <div className="text-4xl font-bold tracking-tight">
             Jakub Gania
           </div>
-          <div className="text-xl text-slate-400">
-            Software Enginner & Creator
+          <div className="text-xl tracking-tight text-slate-400">
+            SWE & Creator -  MSc in Computer Science
           </div>
         </div>
       </div>
       <div className="text-2xl tracking-tight">
-        {/* <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who likes to experiment with technologies. I add various interesting content on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a>. */}
         <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500">linkedin</a>
       </div>
       <LinkButton path="/" title="about" />
@@ -126,7 +128,6 @@ export default function Home() {
         <div className="flex flex-row flex-wrap gap-4 relative">
           {tags.map((tag) => (
             <div key={tag} className="bg-slate-100 rounded-2xl py-2 px-4 group relative">
-              {/* <span className="text-xl text-slate-500 cursor-default">{tag}</span> */}
               <span className="text-xl cursor-default">{tag}</span>
             </div>
           ))}
@@ -144,7 +145,6 @@ export default function Home() {
         <div className="flex flex-row flex-wrap gap-4 relative">
           {software.map((app) => (
             <div key={app} className="bg-slate-100 rounded-2xl py-2 px-4 group relative">
-              {/* <span className="text-xl text-slate-500 cursor-default">{tag}</span> */}
               <span className="text-xl cursor-default">{app}</span>
             </div>
           ))}
@@ -180,9 +180,9 @@ export default function Home() {
           </div>
         </div>
         <ul className="list-disc marker:text-black pl-6">
-        {projects.map((project) => (
-          <li key={project.path} className="text-2xl text-blue-500 pb-2">{project.name}</li>
-        ))}
+          {projects.map((project) => (
+            <li key={project.path} className="text-2xl text-blue-500 pb-2">{project.name}</li>
+          ))}
         </ul>
       </div>
       <LinkButton path="/" title="all projects" />
@@ -203,7 +203,7 @@ export default function Home() {
                   src="/hqdefault.jpg"
                   width={240}
                   height={140}
-                  alt="ptho"
+                  alt="examole img"
                   className="rounded-2xl"
                 />
               </div> */}
