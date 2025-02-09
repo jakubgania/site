@@ -101,7 +101,9 @@ export default function Home() {
     "Visual Studio Code",
     "Xcode",
     "Final Cut Pro",
-    "Pixelmator Pro"
+    "Pixelmator Pro",
+    "Postman",
+    "DBeaver"
   ]
 
   const links = [
