@@ -1,3 +1,5 @@
+import gm from "../../public/gm-1.png"
+import Image from "next/image"
 
 export default function YouTube() {
   const youtube = [
@@ -48,8 +50,13 @@ export default function YouTube() {
   ]
   
   return (
-    <div>
-      youtube view
+    <div className="flex flex-col gap-14">
+      <div className="content-wrapper">
+        youtube view
+      </div>
+
+      <Image src={gm} alt="" className="image-section" />
+
     </div>
   )
 }

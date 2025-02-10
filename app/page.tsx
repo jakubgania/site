@@ -21,6 +21,7 @@ import {
 
 export default function Home() {
   const projects = [
+    { name: "weather-app", path: "/example-path4" },
     { name: "github-trending-repositories", path: "/example-path-3" },
     { name: "fastapi-graphql", path: "/example-path-2" },
     { name: "api-rest-to-graphql-github", path: "/example-path" },
@@ -82,8 +83,10 @@ export default function Home() {
     "JavaScript",
     "TypeScript",
     "TailwindCSS",
+    "TypeORM",
     "Vue.js",
     "Vuetify.js",
+    "Vitest",
     "Next.js",
     "Nest.js",
     "Python",
@@ -92,6 +95,7 @@ export default function Home() {
     "Docker",
     "Selenium",
     "Playwright",
+    "PostgreSQL",
     "SQL",
     "Swift",
     "SwiftUI"
@@ -103,7 +107,8 @@ export default function Home() {
     "Final Cut Pro",
     "Pixelmator Pro",
     "Postman",
-    "DBeaver"
+    "DBeaver",
+    "Ollama"
   ]
 
   const links = [
@@ -112,17 +117,17 @@ export default function Home() {
     { icon: <FaLinkedinIn />, title: "LinkedIn", url: "https://www.linkedin.com/in/jakubgania/" },
     { icon: <FaYoutube />, title: "YouTube", url: "https://www.youtube.com/@JakubGaniaSoftware/videos" },
     { icon: <FaGlobe />, title: "Credly", url: "https://www.credly.com/users/jakub-gania" },
-    { icon: <BsStars />, title: "NeuronScale", url: "https://neuronscale.com" }
+    // { icon: <BsStars />, title: "NeuronScale", url: "https://neuronscale.com" }
   ]
 
   return (
-    <div className="flex flex-col gap-14">
+    <div className="content-wrapper flex flex-col gap-20">
       <div className="flex gap-6 items-center">
         <div>
         <Image
           src="/me.jpg"
-          width={84}
-          height={84}
+          width={94}
+          height={94}
           quality={100}
           alt="My photo"
           className="rounded-full"
@@ -138,7 +143,7 @@ export default function Home() {
         </div>
       </div>
       <div className="text-xl tracking-tight">
-        <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500">linkedin</a>
+        <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500"> LinkedIn</a>
       </div>
       <div className="text-xl tracking-tight">
         see what I do in other sections or read more about me on the about page
@@ -217,6 +222,16 @@ export default function Home() {
           ))}
         </ul> */}
       </div>
+      {/* <div>
+        <h2 className="text-3xl font-bold">
+          photos & concepts
+        </h2>
+        <div className="py-8">
+          <div className="text-xl">
+            example description
+          </div>
+        </div>
+      </div> */}
       <div>
         <h2 className="text-3xl font-bold">
           projects
@@ -249,7 +264,7 @@ export default function Home() {
         </h2>
         <div className="py-8">
           <div className=" text-xl text-slate-400">
-            91 subscribers • 44 videos • 10,800 views
+            91 subscribers • 44 videos • 11,240 views
           </div>
         </div>
         <div className="pb-8">
