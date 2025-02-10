@@ -32,7 +32,7 @@ export default function RootLayout({
         className="antialiased bg-white"
       >
         <div className="flex flex-col justify-between pt-0 md:pt-12 lg:pt-24 p-8">
-          <main className="">
+          <main>
             {children}
           </main>
           <Footer />
