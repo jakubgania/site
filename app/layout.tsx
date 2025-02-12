@@ -28,6 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.className}>
+    {/* <html lang="en" className={geistSans.className}> */}
       <body
         className="antialiased bg-white"
       >
