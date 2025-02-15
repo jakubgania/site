@@ -228,7 +228,7 @@ export default function Home() {
           </li>
         </ul>
       </div>
-      <LinkButton path="/" title="all projects" />
+      <LinkButton path="/projects" title="all projects" />
       <div>
         <h2 className="text-2xl md:text-3xl font-bold">
           youtube

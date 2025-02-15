@@ -52,7 +52,9 @@ export default function YouTube() {
   return (
     <div className="flex flex-col gap-14">
       <div className="content-wrapper">
-        youtube view
+        <h2 className="text-2xl md:text-3xl font-bold">
+          youtube
+        </h2>
       </div>
 
       <Image src={gm} alt="" className="image-section" />
