@@ -21,7 +21,7 @@ body {
 }
 
 .content-wrapper {
-  @apply max-w-[74ch] mx-auto w-full my-10;
+  @apply max-w-[70ch] mx-auto w-full my-10;
 }
 
 .image-section {

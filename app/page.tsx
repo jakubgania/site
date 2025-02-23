@@ -92,82 +92,95 @@ export default function Home() {
   ]
 
   return (
-    <div className="content-wrapper flex flex-col gap-20">
+    <div className="content-wrapper flex flex-col gap-16">
       <div className="flex gap-6 items-center mt-16">
         <div>
           <Image
             src="/me.jpg"
-            width={94}
-            height={94}
+            width={92}
+            height={92}
             quality={100}
             alt="My photo"
             className="rounded-full"
           />  
         </div>
         <div>
-          <div className="text-xl md:text-3xl font-bold tracking-tight">
+          <div className="text-xl md:text-2xl font-bold tracking-tight">
             Jakub Gania
           </div>
-          <div className="text-base md:text-xl tracking-tight text-slate-400">
+          <div className="text-base md:text-lg tracking-tight text-slate-400">
             SWE & Creator -  MSc in Computer Science
           </div>
         </div>
       </div>
-      <div className="text-base md:text-lg font-medium tracking-tight">
+      <div className="text-base md:text-lg font-medium">
         <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn new things and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500"> LinkedIn</a>
+      </div>
+      <div className="text-base md:text-lg font-medium">
+        description of current job position
       </div>
       {/* <div className="text-base md:text-xl tracking-tight">
         see what I do in other sections or read more about me on the about page
       </div> */}
-      <LinkButton path="/" title="about" />
+      {/* <LinkButton path="/" title="about" /> */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold">
+        {/* <h2 className="text-2xl md:text-3xl font-bold">
           technologies
-        </h2>
+        </h2> */}
         <div className="py-8">
-          <div className="text-base md:text-lg">
-            I experiment with different technologies
+          <div className="text-base md:text-lg font-medium">
+            {/* I experiment with different technologies */}
+            I use various technologies in my daily work and experiment with many of them in my own projects
           </div>
         </div>
-        <div className="flex flex-row flex-wrap gap-2 md:gap-2 relative">
+        <div className="flex flex-row flex-wrap gap-2 relative">
           {tags.map((tag) => (
-            <div key={tag} className="bg-slate-50 text-slate-400 rounded-lg py-1 px-4 group relative">
-              <span className="text-base md:text-base cursor-default">{tag}</span>
+            <div key={tag} className="py-1 pr-4 group relative">
+              <span className="text-base md:text-lg text-slate-400 font-medium cursor-default">{tag}</span>
             </div>
           ))}
         </div>
       </div>
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold">
+        {/* <h2 className="text-2xl md:text-3xl font-bold">
           software
-        </h2>
+        </h2> */}
         <div className="py-8">
-          <div className="text-base md:text-lg">
+          <div className="text-base md:text-lg font-medium">
             applications and programs that I use
           </div>
         </div>
-        <div className="flex flex-row flex-wrap gap-2 md:gap-4 relative">
+        <div className="flex flex-row flex-wrap gap-2 relative">
           {software.map((app) => (
-            <div key={app} className="bg-slate-50 text-slate-400 rounded-2xl py-2 px-4 group relative">
-              <span className="text-base md:text-xl cursor-default">{app}</span>
+            <div key={app} className="py-1 pr-4 group relative">
+              <span className="text-base md:text-lg text-slate-400 font-medium cursor-default">{app}</span>
             </div>
           ))}
         </div>
       </div>
-      <LinkButton path="/" title="all programs" />
+      {/* <LinkButton path="/" title="all programs" /> */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold">
+        {/* <h2 className="text-2xl md:text-3xl font-bold">
           links
-        </h2>
+        </h2> */}
         <div className="py-8">
           <div className="text-base md:text-lg">
             my social media and other websites
           </div>
         </div>
-        <div className="grid flex-grow grid-cols-1 gap-2 md:gap-4 md:grid-cols-2">
+        <ul className="list-disc marker:text-black pl-6 font-medium">
+          {links.map((link) =>(
+            <li key={link.title} className="text-base md:text-lg text-blue-500 pb-2">
+              <a href={link.url} target="_blank">
+                {link.title}
+              </a>
+            </li>
+          ))}
+        </ul>
+        {/* <div className="grid flex-grow grid-cols-1 gap-2 md:grid-cols-2">
           {links.map((link) => (
-            <div key={link.title} className="">
-              <a href={link.url} target="_blank" className="w-full flex items-center text-slate-400 text-lg bg-slate-50 rounded-2xl p-3">
+            <div key={link.title}>
+              <a href={link.url} target="_blank" className="w-full flex items-center text-slate-400 text-lg bg-slate-50 rounded-lg p-3">
                 <section className="flex flex-row items-center justify-between w-full">
                   <div className="flex items-center">
                     <div className="w-10">
@@ -182,7 +195,7 @@ export default function Home() {
               </a>
             </div>
           ))}
-        </div>
+        </div> */}
         {/* <ul className="w-full flex flex-col gap-4">
           {links.map((link) => (
             <li key={link.title} className="">
@@ -204,15 +217,15 @@ export default function Home() {
         </div>
       </div> */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold">
+        {/* <h2 className="text-2xl md:text-3xl font-bold">
           projects
-        </h2>
+        </h2> */}
         <div className="py-8">
           <div className="text-base md:text-lg">
             some of my open source projects
           </div>
         </div>
-        <ul className="list-disc marker:text-black pl-6">
+        <ul className="list-disc marker:text-black pl-6 font-medium">
           {projects.map((project) => (
             <li key={project.path} className="text-base md:text-lg text-blue-500 pb-2">{project.name}</li>
           ))}
@@ -230,17 +243,22 @@ export default function Home() {
       </div>
       <LinkButton path="/projects" title="all projects" />
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold">
+        {/* <h2 className="text-2xl md:text-3xl font-bold">
           youtube
-        </h2>
-        <div className="py-8">
-          <div className="text-base md:text-lg text-slate-400">
+        </h2> */}
+        <div className="pb-8">
+          <div className="text-base md:text-lg">
             91 subscribers • 44 videos • 11,240 views
           </div>
         </div>
         <div className="pb-8">
           <div className="text-base md:text-lg">
             most often I create videos in which I show my projects, but sometimes they are just casual videos in which I show how I program something, I think that YouTube is a great place to commemorate your projects which you can analyze or show to another person at any time
+          </div>
+        </div>
+        <div className="pb-8">
+          <div className="text-base md:text-lg">
+            some of my videos:
           </div>
         </div>
         <ul className="list-disc marker:text-black pl-5">
