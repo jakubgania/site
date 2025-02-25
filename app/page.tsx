@@ -49,9 +49,6 @@ export default function Home() {
   ]
 
   const tags = [
-    "HTML",
-    "CSS",
-    "JavaScript",
     "TypeScript",
     "TailwindCSS",
     "TypeORM",
@@ -60,14 +57,12 @@ export default function Home() {
     "Vitest",
     "Next.js",
     "Nest.js",
-    "Python",
     "Flask",
     "FastAPI",
     "Docker",
     "Selenium",
     "Playwright",
     "PostgreSQL",
-    "SQL",
     "Swift",
     "SwiftUI"
   ]
@@ -87,7 +82,7 @@ export default function Home() {
     { icon: <FaGithub />, title: "GitHub", url: "https://github.com/jakubgania" },
     { icon: <FaLinkedinIn />, title: "LinkedIn", url: "https://www.linkedin.com/in/jakubgania/" },
     { icon: <FaYoutube />, title: "YouTube", url: "https://www.youtube.com/@JakubGaniaSoftware/videos" },
-    { icon: <FaGlobe />, title: "Credly", url: "https://www.credly.com/users/jakub-gania" },
+    // { icon: <FaGlobe />, title: "Credly", url: "https://www.credly.com/users/jakub-gania" },
     // { icon: <BsStars />, title: "NeuronScale", url: "https://neuronscale.com" }
   ]
 
@@ -108,7 +103,7 @@ export default function Home() {
           <div className="text-xl md:text-2xl font-bold tracking-tight">
             Jakub Gania
           </div>
-          <div className="text-base md:text-lg tracking-tight text-slate-400">
+          <div className="text-base md:text-lg tracking-tigh font-medium">
             SWE & Creator -  MSc in Computer Science
           </div>
         </div>
@@ -117,11 +112,20 @@ export default function Home() {
         <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn new things and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500"> LinkedIn</a>
       </div>
       <div className="text-base md:text-lg font-medium">
-        description of current job position
+        I work at <a href="https://www.simpl.de/en/" target="_blank" className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">SIMPL</a>, a German startup based in Dortmund, where I help enhance our SaaS product for optimizing service and maintenance operations, driving efficiency and increasing after-sales revenue.
       </div>
-      {/* <div className="text-base md:text-xl tracking-tight">
-        see what I do in other sections or read more about me on the about page
-      </div> */}
+      <div className="text-base md:text-lg font-medium">
+        I hold a Master’s degree in Computer Science from a university in Poland and have also completed postgraduate studies in cloud technologies. My primary focus is on TypeScript, along with frameworks and tools like Next.js, Nest.js, Vue.js, TailwindCSS, TypeORM, and Vitest. I also have experience with Docker, Flask, FastAPI, Selenium, Playwright, PostgreSQL, Swift, and SwiftUI.
+      </div>
+      <div className="flex flex-row gap-2 bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
+        {links.map((link) =>(
+          <div key={link.title} className="text-base md:text-lg font-medium">
+            <a href={link.url} target="_blank">
+              {link.title}
+            </a>
+          </div>
+        ))}
+      </div>
       {/* <LinkButton path="/" title="about" /> */}
       <div>
         {/* <h2 className="text-2xl md:text-3xl font-bold">
@@ -129,22 +133,21 @@ export default function Home() {
         </h2> */}
         <div className="py-8">
           <div className="text-base md:text-lg font-medium">
-            {/* I experiment with different technologies */}
-            I use various technologies in my daily work and experiment with many of them in my own projects
+            I use various technologies in my daily work and experiment with many of them in my own projects:
           </div>
         </div>
         <div className="flex flex-row flex-wrap gap-2 relative">
           {tags.map((tag) => (
             <div key={tag} className="py-1 pr-4 group relative">
-              <span className="text-base md:text-lg text-slate-400 font-medium cursor-default">{tag}</span>
+              <span className="text-base md:text-lg font-medium cursor-default">{tag}</span>
             </div>
           ))}
         </div>
       </div>
-      <div>
-        {/* <h2 className="text-2xl md:text-3xl font-bold">
+      {/* <div>
+        <h2 className="text-2xl md:text-3xl font-bold">
           software
-        </h2> */}
+        </h2>
         <div className="py-8">
           <div className="text-base md:text-lg font-medium">
             applications and programs that I use
@@ -157,27 +160,10 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
       {/* <LinkButton path="/" title="all programs" /> */}
-      <div>
-        {/* <h2 className="text-2xl md:text-3xl font-bold">
-          links
-        </h2> */}
-        <div className="py-8">
-          <div className="text-base md:text-lg">
-            my social media and other websites
-          </div>
-        </div>
-        <ul className="list-disc marker:text-black pl-6 font-medium">
-          {links.map((link) =>(
-            <li key={link.title} className="text-base md:text-lg text-blue-500 pb-2">
-              <a href={link.url} target="_blank">
-                {link.title}
-              </a>
-            </li>
-          ))}
-        </ul>
-        {/* <div className="grid flex-grow grid-cols-1 gap-2 md:grid-cols-2">
+      {/* <div>
+        <div className="grid flex-grow grid-cols-1 gap-2 md:grid-cols-2">
           {links.map((link) => (
             <div key={link.title}>
               <a href={link.url} target="_blank" className="w-full flex items-center text-slate-400 text-lg bg-slate-50 rounded-lg p-3">
@@ -195,8 +181,8 @@ export default function Home() {
               </a>
             </div>
           ))}
-        </div> */}
-        {/* <ul className="w-full flex flex-col gap-4">
+        </div>
+        <ul className="w-full flex flex-col gap-4">
           {links.map((link) => (
             <li key={link.title} className="">
               <a href={link.url} target="_blank" className="flex text-xl bg-slate-100 rounded-2xl p-3 w-full">
@@ -204,8 +190,8 @@ export default function Home() {
               </a>
             </li>
           ))}
-        </ul> */}
-      </div>
+        </ul>
+      </div> */}
       {/* <div>
         <h2 className="text-3xl font-bold">
           photos & concepts
@@ -221,7 +207,7 @@ export default function Home() {
           projects
         </h2> */}
         <div className="py-8">
-          <div className="text-base md:text-lg">
+          <div className="text-base md:text-lg font-medium">
             some of my open source projects
           </div>
         </div>
@@ -231,39 +217,39 @@ export default function Home() {
           ))}
         </ul>
         <div className="py-8">
-          <div className="text-base md:text-lg">
+          <div className="text-base md:text-lg font-medium">
             a place where I gather knowledge about artificial intelligence, machine learning, deep learning and cloud technologies. It is still in a phase of intensive development
           </div>
         </div>
         <ul className="list-disc marker:text-black pl-6">
-          <li className="text-base md:text-lg text-blue-500">
+          <li className="text-base md:text-lg text-blue-500 font-medium">
             <a href="https://neuronscale.com" target="_blank">neuronscale.com</a>
           </li>
         </ul>
       </div>
-      <LinkButton path="/projects" title="all projects" />
+      {/* <LinkButton path="/projects" title="all projects" /> */}
       <div>
         {/* <h2 className="text-2xl md:text-3xl font-bold">
           youtube
         </h2> */}
         <div className="pb-8">
-          <div className="text-base md:text-lg">
+          <div className="text-base md:text-lg font-medium">
             91 subscribers • 44 videos • 11,240 views
           </div>
         </div>
         <div className="pb-8">
-          <div className="text-base md:text-lg">
+          <div className="text-base md:text-lg font-medium">
             most often I create videos in which I show my projects, but sometimes they are just casual videos in which I show how I program something, I think that YouTube is a great place to commemorate your projects which you can analyze or show to another person at any time
           </div>
         </div>
         <div className="pb-8">
-          <div className="text-base md:text-lg">
+          <div className="text-base md:text-lg font-medium">
             some of my videos:
           </div>
         </div>
         <ul className="list-disc marker:text-black pl-5">
           {youtube.map((video) => (
-            <li key={video.url} className="text-base md:text-lg text-blue-500 tracking-tight pb-2 md:pb-4 relative group">
+            <li key={video.url} className="text-base md:text-lg font-medium text-blue-500 tracking-tight pb-2 md:pb-4 relative group">
               {/* <div className="hidden group-hover:block">
                 <Image
                   src="/hqdefault.jpg"
@@ -294,7 +280,7 @@ export default function Home() {
           ))}
         </ul>
       </div>
-      <LinkButton path="/youtube" title="all videos" />
+      {/* <LinkButton path="/youtube" title="all videos" /> */}
     </div>
   );
 }
