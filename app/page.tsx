@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import igmh from '../public/dg-1-square.jpg'
+// import igmh from '../public/dg-1-square.jpg'
 
 import {
   FaXTwitter,
@@ -11,13 +11,13 @@ import {
   FaGlobe
 } from "react-icons/fa6"
 
-import {
-  RiArrowDropRightLine
-} from "react-icons/ri"
+// import {
+//   RiArrowDropRightLine
+// } from "react-icons/ri"
 
-import {
-  BsStars
-} from "react-icons/bs"
+// import {
+//   BsStars
+// } from "react-icons/bs"
 
 export default function Home() {
   const projects = [
@@ -250,32 +250,9 @@ export default function Home() {
         <ul className="list-disc marker:text-black pl-5">
           {youtube.map((video) => (
             <li key={video.url} className="text-base md:text-lg font-medium text-blue-500 tracking-tight pb-2 md:pb-4 relative group">
-              {/* <div className="hidden group-hover:block">
-                <Image
-                  src="/hqdefault.jpg"
-                  width={240}
-                  height={140}
-                  alt="examole img"
-                  className="rounded-2xl"
-                />
-              </div> */}
               <a href={video.url} target="_blank">
                 {video.name}
               </a>
-              {/* <div className="hidden absolute z-20 group-hover:block bg-white">
-                <Image
-                  src="/hqdefault.jpg"
-                  width={240}
-                  height={140}
-                  alt="ptho"
-                  className="rounded-2xl"
-                />
-              </div> */}
-              {/* <div className="pt-2">
-                <div className="text-black text-xl font-semibold">
-                  read more
-                </div>
-              </div> */}
             </li>
           ))}
         </ul>
