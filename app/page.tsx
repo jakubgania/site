@@ -1,8 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-// import igmh from '../public/dg-1-square.jpg'
-
 import {
   FaXTwitter,
   FaLinkedinIn,
