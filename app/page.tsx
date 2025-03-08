@@ -109,12 +109,6 @@ export default function Home() {
       <div className="text-base md:text-lg font-medium">
         <span className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">software engineer</span> who creates various projects, likes to learn new things and discover new technologies. I enjoy creating content on youtube and taking photos in my free time. I share my thoughts on <a href="https://x.com/jakubgania" target="_blank" className="text-blue-500">X</a> and <a href="https://linkedin.com/in/jakubgania" target="_blank" className="text-blue-500"> LinkedIn</a>
       </div>
-      <div className="text-base md:text-lg font-medium">
-        I work at <a href="https://www.simpl.de/en/" target="_blank" className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">SIMPL</a>, a German startup based in Dortmund, where I help enhance our SaaS product for optimizing service and maintenance operations, driving efficiency and increasing after-sales revenue.
-      </div>
-      <div className="text-base md:text-lg font-medium">
-        I hold a Master’s degree in Computer Science from a university in Poland and have also completed postgraduate studies in cloud technologies. My primary focus is on TypeScript, along with frameworks and tools like Next.js, Nest.js, Vue.js, TailwindCSS, TypeORM, and Vitest. I also have experience with Docker, Flask, FastAPI, Selenium, Playwright, PostgreSQL, Swift, and SwiftUI.
-      </div>
       <div className="flex flex-row gap-2 bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">
         {links.map((link) =>(
           <div key={link.title} className="text-base md:text-lg font-medium">
@@ -123,6 +117,12 @@ export default function Home() {
             </a>
           </div>
         ))}
+      </div>
+      <div className="text-base md:text-lg font-medium">
+        I work at <a href="https://www.simpl.de/en/" target="_blank" className="bg-gradient-to-r from-blue-600 to-sky-400 bg-clip-text text-transparent">SIMPL</a>, a German startup based in Dortmund, where I help enhance our SaaS product for optimizing service and maintenance operations, driving efficiency and increasing after-sales revenue.
+      </div>
+      <div className="text-base md:text-lg font-medium">
+        I hold a Master’s degree in Computer Science from a university in Poland and have also completed postgraduate studies in cloud technologies. My primary focus is on TypeScript, along with frameworks and tools like Next.js, Nest.js, Vue.js, TailwindCSS, TypeORM, and Vitest. I also have experience with Docker, Flask, FastAPI, Selenium, Playwright, PostgreSQL, Swift, and SwiftUI.
       </div>
       {/* <LinkButton path="/" title="about" /> */}
       <div>
